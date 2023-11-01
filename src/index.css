@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  background-color: fff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'tmon';
+  src: url("./assets/fonts/tmon.ttf");
+}
+
+@font-face {
+  font-family: 'baemin';
+  src: url("./assets/fonts/baemin.ttf");
+}
+
+@font-face {
+  font-family: "google1";
+  src: url("./assets/fonts/google1.ttf");
+}
+
+@font-face {
+  font-family: "google2";
+  src: url("./assets/fonts/google2.ttf");
+}
+
+@font-face {
+  font-family: "google3";
+  src: url("./assets/fonts/google3.ttf");
+}
+
+@font-face {
+  font-family: "google4";
+  src: url("./assets/fonts/google4.ttf");
+}
+
+
+
+
+
