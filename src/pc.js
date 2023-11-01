@@ -35,15 +35,14 @@ export default function PC() {
     const video5Ref = useRef();
     const video6Ref = useRef();
 
-
     useEffect(() => {       // "c1 move"
         gsap.registerPlugin(ScrollTrigger);
       
         ScrollTrigger.create({
         markers: false,
-        trigger: '.tr1',
-        start: 'top 95%',  // when the "X" of the startTrigger hits "Y" of the scroller
-        end: 'bottom 750px',     // when the "X" of the endTrigger hits "Y" of the scroller
+        trigger: '.font2',
+        start: 'top 60%',  // when the "X" of the startTrigger hits "Y" of the scroller
+        end: 'bottom 60%',     // when the "X" of the endTrigger hits "Y" of the scroller
         scrub: 3,
         onUpdate: (self) => {
             gsap.to(c1Ref.current, {
@@ -60,9 +59,9 @@ export default function PC() {
       
         ScrollTrigger.create({
         markers: false,
-        trigger: '.tr1',
-        start: 'top 95%',  // when the "X" of the startTrigger hits "Y" of the scroller
-        end: 'bottom 750px',     // when the "X" of the endTrigger hits "Y" of the scroller
+        trigger: '.font2',
+        start: 'top 60%',  // when the "X" of the startTrigger hits "Y" of the scroller
+        end: 'bottom 60%',     // when the "X" of the endTrigger hits "Y" of the scroller
         scrub: 3,
         onUpdate: (self) => {
             gsap.to(c2Ref.current, {
@@ -79,9 +78,9 @@ export default function PC() {
       
         ScrollTrigger.create({
         markers: false,
-        trigger: '.tr1',
-        start: 'top 95%',  // when the "X" of the startTrigger hits "Y" of the scroller
-        end: 'bottom 750px',     // when the "X" of the endTrigger hits "Y" of the scroller
+        trigger: '.font2',
+        start: 'top 60%',  // when the "X" of the startTrigger hits "Y" of the scroller
+        end: 'bottom 60%',     // when the "X" of the endTrigger hits "Y" of the scroller
         scrub: 3,
         onUpdate: (self) => {
             gsap.to(s1Ref.current, {
@@ -97,10 +96,10 @@ export default function PC() {
         gsap.registerPlugin(ScrollTrigger);
       
         ScrollTrigger.create({
-        markers: false,
-        trigger: '.tr1',
-        start: 'top 95%',  // when the "X" of the startTrigger hits "Y" of the scroller
-        end: 'bottom 750px',     // when the "X" of the endTrigger hits "Y" of the scroller
+        markers: true,
+        trigger: '.font2',
+        start: 'top 60%',  // when the "X" of the startTrigger hits "Y" of the scroller
+        end: 'bottom 60%',     // when the "X" of the endTrigger hits "Y" of the scroller
         scrub: 3,
         onUpdate: (self) => {
             gsap.to(s2Ref.current, {
@@ -165,15 +164,15 @@ export default function PC() {
         gsap.registerPlugin(ScrollTrigger);
       
         ScrollTrigger.create({
-        markers: true,
+        markers: false,
         trigger: '.section0',
-        start: 'top top',  // scroll start/end가 어디 있느냐에 따라 '시작점의 진행상황'이 달라짐
-        end: 'bottom 80%',  // ex) 20%에서 시작하면 20%는 진행된 상태로 시작 -> 매우 애매
+        start: 'top 0%',  // scroll start/end가 어디 있느냐에 따라 '시작점의 진행상황'이 달라짐
+        end: 'bottom 0%',  // ex) 20%에서 시작하면 20%는 진행된 상태로 시작 -> 매우 애매
         scrub: 3,
         onUpdate: (self) => {
             gsap.to(font1Ref.current, {
-                scale: self.progress * 5, 
-                transformOrigin: 'bottom 15%',
+                scale: self.progress * 80,
+                transformOrigin: '5.5% 28%',  // bottom left
                 overwrite: true,
                 pin: true, 
             });
@@ -343,15 +342,6 @@ export default function PC() {
       console.log("width ::: ", screenWidth, videoWidth);
 
 
-    
-      
-    
-
- 
-    
-
-
-
     return (
         <div className='root'>
 
@@ -376,19 +366,23 @@ export default function PC() {
 
                     <div style={{height: '1500px'}}></div>
 
-                    <div className='section1' style={{backgroundColor:'red'}}>
+                    <div className='section1'>
                         {/* <img className='univLogo' src={univLogo} ref={univLogoRef} /> */}
                         <video className='univLogo' src={video3} ref={univLogoRef} autoplay='autoplay' muted loop />
                         <div className='font2'>
-                                <p>MAJOR IN</p>
-                                <div className='font2-1'>
-                                    <p className='font3 font3-1' ref={c1Ref}>HISTORY</p>
-                                    <p className='font3 font3-1' ref={c2Ref}>CONTENTS &</p>
-                                </div>
-                                <div className='font2-2'>
-                                    <p className='font3 font3-1' ref={s1Ref}>COMPUTER</p>
-                                    <p className='font3 font3-1' ref={s2Ref}>SCIENCE</p>
-                                </div>
+                            <p>MAJOR IN</p>
+                            <div className='font2-1'>
+                                <p className='font3'>H</p>
+                                <p className='font3 font3-1' ref={c1Ref}>ISTORY</p>
+                                <p className='font3' ref={cRef} style={{marginLeft:'30px'}}>C</p>
+                                <p className='font3 font3-1' ref={c2Ref}>ONTENTS &</p>
+                            </div>
+                            <div className='font2-2'>
+                                <p className='font3'>C</p>
+                                <p className='font3 font3-1' ref={s1Ref}>OMPUTER</p>
+                                <p className='font3 S' ref={sRef} style={{marginLeft:'30px'}}>S</p>
+                                <p className='font3 font3-1' ref={s2Ref}>CIENCE</p>
+                            </div>
                         </div>
                     </div>
 
