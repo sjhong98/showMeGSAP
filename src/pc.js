@@ -35,7 +35,7 @@ export default function PC() {
     const video5Ref = useRef();
     const video6Ref = useRef();
 
-    useEffect(() => {       // "c1 move"
+    useEffect(() => {       // "c1 move
         gsap.registerPlugin(ScrollTrigger);
       
         ScrollTrigger.create({
@@ -96,7 +96,7 @@ export default function PC() {
         gsap.registerPlugin(ScrollTrigger);
       
         ScrollTrigger.create({
-        markers: true,
+        markers: false,
         trigger: '.font2',
         start: 'top 60%',  // when the "X" of the startTrigger hits "Y" of the scroller
         end: 'bottom 60%',     // when the "X" of the endTrigger hits "Y" of the scroller
@@ -137,7 +137,7 @@ export default function PC() {
 
     useEffect(() => {       // mbti pin
         gsap.registerPlugin(ScrollTrigger);
-        gsap.to(mbtiRef.current, {
+        gsap.from(mbtiRef.current, {
             scrollTrigger: {
                 markers: false,
                 trigger: '.font4',
@@ -301,7 +301,7 @@ export default function PC() {
         gsap.registerPlugin(ScrollTrigger);
       
         ScrollTrigger.create({
-        markers: false,
+        markers: true,
         trigger: '.end',
         start: 'top bottom',  // when the "X" of the startTrigger hits "Y" of the scroller
         end: 'bottom top',     // when the "X" of the endTrigger hits "Y" of the scroller
@@ -372,16 +372,16 @@ export default function PC() {
                         <div className='font2'>
                             <p>MAJOR IN</p>
                             <div className='font2-1'>
-                                <p className='font3'>H</p>
-                                <p className='font3 font3-1' ref={c1Ref}>ISTORY</p>
+                                <p className='font3'>HISTORY CONTENTS</p>
+                                {/* <p className='font3 font3-1' ref={c1Ref}>ISTORY</p>
                                 <p className='font3' ref={cRef} style={{marginLeft:'30px'}}>C</p>
-                                <p className='font3 font3-1' ref={c2Ref}>ONTENTS &</p>
+                                <p className='font3 font3-1' ref={c2Ref}>ONTENTS &</p> */}
                             </div>
                             <div className='font2-2'>
-                                <p className='font3'>C</p>
-                                <p className='font3 font3-1' ref={s1Ref}>OMPUTER</p>
+                                <p className='font3'>COMPUTER SCIENCE</p>
+                                {/* <p className='font3 font3-1' ref={s1Ref}>OMPUTER</p>
                                 <p className='font3 S' ref={sRef} style={{marginLeft:'30px'}}>S</p>
-                                <p className='font3 font3-1' ref={s2Ref}>CIENCE</p>
+                                <p className='font3 font3-1' ref={s2Ref}>CIENCE</p> */}
                             </div>
                         </div>
                     </div>
